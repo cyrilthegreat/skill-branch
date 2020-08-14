@@ -12,9 +12,10 @@ import ru.skillbranch.gameofthrones.repositories.RootRepository
 
 class MainViewModel(val app: Application) : AndroidViewModel(app) {
     private val repository = RootRepository
+
     fun syncDataIfNeed() : LiveData<LoadResult<Boolean>> {
         val result: MutableLiveData<LoadResult<Boolean>> = MutableLiveData(LoadResult.Loading(false))
-        viewModelScope.launch(Dispatchers.IO) {
+//        viewModelScope.launch(Dispatchers.IO) {
 //            if (repository.isNeedUpdate()) {
 //                if (!app.applicationContext.is) {
 //
@@ -25,7 +26,7 @@ class MainViewModel(val app: Application) : AndroidViewModel(app) {
 //                delay(5000)
 //                result.postValue(LoadResult.Sucess(true))
 //            }
-        }
+//        }
         return result
     }
 }

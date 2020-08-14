@@ -25,5 +25,14 @@
         <action
             android:id="@+id/action_nav_character_self"
             app:destination="@id/nav_character" />
+        <argument
+            android:name="characterId"
+            app:argType="string" />
+        <argument
+            android:name="house"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
     </fragment>
 </navigation>
